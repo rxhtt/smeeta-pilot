@@ -32,9 +32,10 @@ export default {
         publicPath: importedBuild.publicPath ?? "/build/",
         assetsBuildDirectory:
           importedBuild.assetsBuildDirectory ?? "build/client",
+        lastFuture: (importedBuild.future || {}),
         future: {
           ...(importedBuild.future || {}),
-          v3_singleFetch: true,
+          v3_singleFetch: false,
         },
       };
 

@@ -7,6 +7,6 @@ export default {
   buildDirectory: "build",
   ssr: true,
   future: {
-    v3_singleFetch: true,
+    v3_singleFetch: false,
   },
 } as unknown as Config;
