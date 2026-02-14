@@ -8,6 +8,5 @@ export default {
   ssr: true,
   future: {
     v3_singleFetch: true,
-    unstable_singleFetch: true,
   },
 } as unknown as Config;

@@ -23,6 +23,10 @@ export default {
        * Create a Remix request handler and pass
        */
       const importedBuild = (remixBuild as any).default ?? remixBuild;
+
+      console.log('Build keys:', Object.keys(importedBuild));
+      console.log('Build future:', importedBuild.future);
+
       const build = {
         ...importedBuild,
         publicPath: importedBuild.publicPath ?? "/build/",
@@ -31,7 +35,6 @@ export default {
         future: {
           ...(importedBuild.future || {}),
           v3_singleFetch: true,
-          unstable_singleFetch: true,
         },
       };
 
