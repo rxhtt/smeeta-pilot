@@ -23,14 +23,16 @@ export default {
        * Create a Remix request handler and pass
        * Hydrogen's Storefront client to the loader context.
        */
+      const build = (remixBuild as any).default ?? remixBuild;
+
       const handleRequest = createRequestHandler({
         build: {
-          ...remixBuild,
-          publicPath: remixBuild.publicPath ?? "/build/",
+          ...build,
+          publicPath: build.publicPath ?? "/build/",
           assetsBuildDirectory:
-            remixBuild.assetsBuildDirectory ?? "build/client",
+            build.assetsBuildDirectory ?? "build/client",
           future: {
-            ...remixBuild.future,
+            ...build.future,
             v3_singleFetch: true,
             unstable_singleFetch: true,
           },
