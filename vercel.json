@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "framework": "remix",
-    "buildCommand": "npm run build:vercel",
-    "outputDirectory": "dist"
+    "framework": "hydrogen",
+    "buildCommand": "npm run build:vercel"
 }
