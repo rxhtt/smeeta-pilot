@@ -31,7 +31,7 @@ export default {
         ...importedBuild,
         publicPath: importedBuild.publicPath ?? "/build/",
         assetsBuildDirectory:
-          importedBuild.assetsBuildDirectory ?? "build/client",
+          importedBuild.assetsBuildDirectory ?? "dist/client",
         lastFuture: (importedBuild.future || {}),
         future: {
           ...(importedBuild.future || {}),

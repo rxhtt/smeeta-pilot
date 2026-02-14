@@ -4,7 +4,7 @@ import { hydrogenPreset } from "@shopify/hydrogen/react-router-preset";
 export default {
   presets: [hydrogenPreset()],
   appDirectory: "app",
-  buildDirectory: "build",
+  buildDirectory: "dist",
   ssr: true,
   future: {
     v3_singleFetch: false,

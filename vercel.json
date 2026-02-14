@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "framework": "remix",
+    "framework": "vite",
     "buildCommand": "npm run build:vercel",
-    "outputDirectory": "build/client"
+    "outputDirectory": "dist/client"
 }
