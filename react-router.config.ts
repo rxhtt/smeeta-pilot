@@ -5,8 +5,5 @@ export default {
   presets: [hydrogenPreset()],
   appDirectory: "app",
   buildDirectory: "dist",
-  ssr: true,
-  future: {
-    v3_singleFetch: false,
-  },
+  ssr: false,
 } as unknown as Config;
