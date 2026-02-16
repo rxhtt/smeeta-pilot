@@ -9,13 +9,14 @@ import { createHydrogenRouterContext } from "~/.server/context";
 export default {
   async fetch(
     request: Request,
-    env: Env,
+    _env: Env,
     executionContext: ExecutionContext,
   ): Promise<Response> {
     try {
+      const env = _env || process.env;
       const hydrogenContext = await createHydrogenRouterContext(
         request,
-        env,
+        env as Env,
         executionContext,
       );
 
@@ -52,9 +53,12 @@ export default {
       }
 
       return response;
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
-      return new Response("An unexpected error occurred", { status: 500 });
+      return new Response(
+        `Internal Server Error: ${error.message}\n${error.stack}`,
+        { status: 500 }
+      );
     }
   },
 };
