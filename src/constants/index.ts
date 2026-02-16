@@ -101,11 +101,11 @@ const goodLists = [
 ];
 
 const storeInfo = {
-  heading: "Project By Veena",
+  heading: "Project By SMEETA PANNAKAR",
   address: "Government First Grade College Dharwad",
   contact: {
-    phone: "(USN) U02AJ23S0436",
-    email: "desaiveena660@gmail.com",
+    phone: "(USN) U02AJ23S0440",
+    email: "smithapannakar704@gmail.com",
   },
 };
 

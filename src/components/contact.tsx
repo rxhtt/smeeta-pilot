@@ -42,12 +42,12 @@ export const Contact = () => {
          <Image width={100} height={100} src="/images/footer-left-leaf.png" alt="leaf-left" id="f-left-leaf" />
 
          <div className="content">
-            <h2>Project by Veena Desai</h2>
+            <h2>Project by SMEETA PANNAKAR</h2>
 
             <div>
                <h3>Student Details</h3>
-               <p>USN: U02AJ23S0436</p>
-               <p>Email: desaiveena660@gmail.com</p>
+               <p>USN: U02AJ23S0440</p>
+               <p>Email: smithapannakar704@gmail.com</p>
                <p>Institution: Government First Grade College Dharwad</p>
             </div>
 

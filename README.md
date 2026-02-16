@@ -1,39 +1,40 @@
-# Mokhito Landing Page with GSAP Animation
+# BCA Final Year Project - Ecommerce Storefront
 
-This project is a tutorial for mastering JavaScript by building the **[Mokhito Landing Page](https://gsap-animation-landing-page-beige.vercel.app/)** featuring engaging GSAP animations. The code is designed for educational purposes, helping you learn advanced animation techniques and modern web development with Next.js.
+## Student Information
+- **Name:** SMEETA PANNAKAR
+- **ID:** U02AJ23S0440
+- **Email:** smithapannakar704@gmail.com
+- **College:** GOVERNMENT FIRST GRADE COLLEGE DHARWAD
+- **Course:** BCA (Bachelor of Computer Applications)
+
+## Project Overview
+This is a production-ready ecommerce storefront built with Shopify Hydrogen, React Router v7, and Tailwind CSS. It features a modern, responsive design with full ecommerce functionality including product listings, cart management, and localization support (INR).
 
 ## Features
+- **Framework:** Shopify Hydrogen & React Router v7
+- **Styling:** Tailwind CSS v4
+- **Currency:** Indian Rupee (INR)
+- **Deployment:** Optimized for Vercel
+- **Performance:** Lightning-fast storefront with server-side rendering (SSR)
 
-- **GSAP Animation:** Learn how to create smooth, interactive animations with GSAP.
-- **Next.js:** Built with Next.js for a fast, scalable, and modern developer experience.
-- **Tutorial Approach:** The code is structured to guide you step-by-step towards JavaScript mastery.
+## Deployment on Vercel
+To deploy this project on Vercel:
+1. Push the code to a GitHub repository.
+2. Link the repository to a new Vercel project.
+3. Vercel will automatically detect the settings from `vercel.json` and deploy the application.
 
-## Getting Started
-
-To run the development server:
-
+## Local Development
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the landing page.
-
-You can start editing the page by modifying `app/page.tsx`. Changes will reload automatically.
-
-## Learn More
-
-- [GSAP Documentation](https://greensock.com/docs/v3/) - for animation techniques.
-- [Next.js Documentation](https://nextjs.org/docs) - for Next.js features and API.
-- [JavaScript Mastery Resources](https://javascript.info/) - to deepen your JS knowledge.
-
-## Deploy on Vercel
-
-Deploy your Next.js app easily on the [Vercel Platform](https://vercel.com/new).
-
-For deployment details, see the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+## Credits
+Project developed by SMEETA PANNAKAR as part of the final year BCA curriculum.
+© 2025 SMEETA PANNAKAR. All rights reserved.
