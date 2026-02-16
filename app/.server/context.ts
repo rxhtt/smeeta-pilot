@@ -19,7 +19,7 @@ const additionalContext = {
 type AdditionalContextType = typeof additionalContext;
 
 declare global {
-  interface HydrogenAdditionalContext extends AdditionalContextType {}
+  interface HydrogenAdditionalContext extends AdditionalContextType { }
 }
 
 export async function createHydrogenRouterContext(
@@ -31,9 +31,11 @@ export async function createHydrogenRouterContext(
     throw new Error("SESSION_SECRET environment variable is not set");
   }
 
-  const waitUntil = executionContext.waitUntil.bind(executionContext);
+  const waitUntil = executionContext?.waitUntil?.bind(executionContext) || (() => { });
   const [cache, session] = await Promise.all([
-    caches.open("hydrogen"),
+    typeof caches !== "undefined"
+      ? caches.open("hydrogen").catch(() => undefined)
+      : Promise.resolve(undefined),
     AppSession.init(request, [env.SESSION_SECRET]),
   ]);
 
@@ -132,11 +134,11 @@ function getLocaleFromRequest(request: Request): I18nLocale {
 
   return COUNTRIES[firstPathPart]
     ? {
-        ...COUNTRIES[firstPathPart],
-        pathPrefix: firstPathPart,
-      }
+      ...COUNTRIES[firstPathPart],
+      pathPrefix: firstPathPart,
+    }
     : {
-        ...COUNTRIES.default,
-        pathPrefix: "",
-      };
+      ...COUNTRIES.default,
+      pathPrefix: "",
+    };
 }
