@@ -1,6 +1,6 @@
 {
     "buildCommand": "npm run build",
-    "outputDirectory": "dist/client",
+    "outputDirectory": "build/client",
     "framework": "react-router",
     "env": {
         "PUBLIC_STORE_DOMAIN": "weaverse-hydrogen.myshopify.com",
